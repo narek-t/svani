@@ -1,16 +1,39 @@
 extends _layout
 block content
 	main.main-content
-		.sprite-example
-			h2.heading Sprite example
-			i.facebook-logo__icon
-			i.google-plus-logo__icon
-			i.instagram-logo__icon
-			i.twitter-logo__icon
-			i.youtube-logo__icon
-		.author-git
-			h2 Github link
-			a(href="https://github.com/narek-t/gulp-jade-sass" target="_blank") https://github.com/narek-t/gulp-jade-sass
+		.top-slide.top-slide__index
+			.container
+				img(src="img/index_b.png", alt="")
+		.manuscript
+			.container
+				p Как замечают модные эксперты, если ты хочешь подняться вверх по карьерной лестнице, одевайся так, как будто ты уже там. Это не значит одеваться в дорогих магазинах, это значит выглядеть дорого и со вкусом!
+		.index-cats
+			.index-cats__item
+				p.index-cats__heading коллекция 2017
+				p.index-cats__title Обувь
+			.index-cats__item
+				p.index-cats__heading коллекция 2017
+				p.index-cats__title Одежда
+			.index-cats__item
+				p.index-cats__heading коллекция 2017
+				p.index-cats__title Аксессуары
+		.cat-section
+			.large-container
+				.container
+					.heading-side.cf
+						h3.title Обувь
+						a.to-cat(href="#") перейти в каталог
+					.cat-tab__wrapper
+						p.title Выбор по тегам
+						.tags__wrapper
+							a(href="#") Кроссовки
+							a(href="#") Сандали
+							a(href="#") Мокассины
+							a(href="#") Туфли
+							a(href="#") Сапоги
+
+
+
 
 
 
