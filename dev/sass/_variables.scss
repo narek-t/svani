@@ -1,6 +1,6 @@
 $pf: 'Playfair Display', serif;
 $os: 'Open Sans', sans-serif;
-
+.slick-slide, .slick-slide *{ outline: none !important; }
 @font-face {
 	font-family: 'Denistina';
 	src: url('../fonts/Denistina.woff2') format('woff2'),
