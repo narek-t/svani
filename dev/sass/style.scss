@@ -240,12 +240,21 @@ body {
 			display: flex;
 			align-items: center;
 			margin-bottom: 20px;
+			overflow: hidden;
 			img {
 				max-width: 100%;
 				height: auto;
 				display: block;
 				max-height: 100%;
 				margin: auto;
+				transition: transform .3s ease-in-out;
+			}
+		}
+		&:hover {
+			.img-wrapper {
+				img {
+					transform: scale(1.02);
+				}
 			}
 		}
 		&-tabs {
@@ -459,7 +468,6 @@ body {
 
 .view-more {
 	display: inline-block;
-	margin-left: 5px;
 	background: #ea8b3f;
 	padding: 0 40px;
 	height: 50px;
@@ -471,6 +479,11 @@ body {
 	&:hover {
 		background: #da792c;
 	}
+}
+
+.view-more-wrapper {
+	text-align: center;
+	margin: 50px 0;
 }
 
 .top-slide__about {
@@ -504,8 +517,80 @@ body {
 	}
 }
 
+.top-slide__contacts {
+	background: url(../img/contacts-bg.jpg) top center no-repeat;
+	background-size: cover;
+	padding: 150px 0;
+	min-height: 760px;
+}
+
+.contacts__wrapper {
+	display: flex;
+	padding: 0 5px;
+	justify-content: space-between;
+	.contacts__col {
+		width: 40%;
+	}
+	p {
+		margin: 0;
+	}
+	.title {
+		font: 600 19px/24px $os;
+		color: #333333;
+		a {
+			color: #333333;
+			text-decoration: none;
+		}
+	}
+	.description {
+		font: 400 13px/24px $os;
+		color: #333333;
+	}
+	.tels {
+		margin-top: 35px;
+	}
+	input {
+		display: block;
+		height: 50px;
+		background-color: white;
+		border: 2px solid #ccd1d3;
+		width: 100%;
+		padding: 0 15px;
+		outline: 0;
+		margin-bottom: 15px;
+	}
+	textarea {
+		display: block;
+		height: 150px;
+		background-color: white;
+		border: 2px solid #ccd1d3;
+		width: 100%;
+		padding: 15px;
+		outline: 0;
+		resize: none;
+	}
+	.submit {
+		cursor: pointer;
+		max-width: 180px;
+		margin: 15px auto 0;
+		height: 52px;
+		background-color: #ffba00;
+		border-radius: 2px;
+		border: none;
+		color: #fff;
+		text-transform: uppercase;
+		transition: all .3s ease-in-out;
+		&:hover {
+			background: #dfa509;
+		}
+	}
+}
 
 
+.map-side {
+	height: 540px;
+	margin: 40px 0;
+}
 
 
 

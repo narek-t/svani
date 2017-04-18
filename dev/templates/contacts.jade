@@ -1,0 +1,184 @@
+extends _layout
+block content
+	main.main-content
+		.top-slide.top-slide__contacts
+		.page-wrapper.contacts-page
+			.large-container
+				.container
+					h1.page-title Контакты
+					.contacts__wrapper
+						.contacts__col
+							.address
+								p.title 117105, Москва Варшавское ш., 9, стр. 1 
+								p.description БЦ «Даниловская мануфактура», корпус «Ряды Солдатенкова»
+							.tels
+								p.title Тел: 
+									a(href="tel:+74957851700") +7 495 785 17 00
+							.tels
+								p.description Коммерческий отдел:
+								p.title Тел: 
+									a(href="tel:+74957851700") +7 495 785 17 00
+							.tels
+								p.description Отдел поставок:
+								p.title Тел: 
+									a(href="tel:+74957851700") +7 495 785 17 00
+						.contacts__col
+							form
+								input(type="text" placeholder="Ваше имя")
+								input(type="tel" placeholder="Телефон")
+								textarea(placeholder="Сообщение")
+								input.submit(type="submit" value="Отправить")
+			.map-side#map-canvas
+			.container
+				p Сегодня существует великое множество тартанов. Самым известным считается Royal Stewart – официальный тартан королевы Великобритании. Его популярность объясняется тем, что начиная с 70-х годов этот тартан активно использовался представителями панк-культуры. Еще один узнаваемый тартан, который ни с чем не спутает ни одна модница, – это Burberry, включающий четыре цвета – песочный, черный, белый и красный. Он был зарегистрирован в 1924 году и использовался одноименным модным домом в подкладочных тканях для тренчей. Постепенно компания Burberry ввела этот принт для аксессуаров, самыми популярными из которых стали клетчатые шарфы.
+			.index-order
+				.container
+					h3 Каталог наших товаров
+					a(href="#") Заказать каталог
+
+
+
+
+
+block inlineScripts
+	script.
+		var style = [
+			{
+			"featureType": "administrative",
+			"elementType": "all",
+			"stylers": [
+			{
+			"saturation": "-100"
+			}
+			]
+			},
+			{
+			"featureType": "administrative.province",
+			"elementType": "all",
+			"stylers": [
+			{
+			"visibility": "off"
+			}
+			]
+			},
+			{
+			"featureType": "landscape",
+			"elementType": "all",
+			"stylers": [
+			{
+			"saturation": -100
+			},
+			{
+			"lightness": 65
+			},
+			{
+			"visibility": "on"
+			}
+			]
+			},
+			{
+			"featureType": "poi",
+			"elementType": "all",
+			"stylers": [
+			{
+			"saturation": -100
+			},
+			{
+			"lightness": "50"
+			},
+			{
+			"visibility": "simplified"
+			}
+			]
+			},
+			{
+			"featureType": "road",
+			"elementType": "all",
+			"stylers": [
+			{
+			"saturation": "-100"
+			}
+			]
+			},
+			{
+			"featureType": "road.highway",
+			"elementType": "all",
+			"stylers": [
+			{
+			"visibility": "simplified"
+			}
+			]
+			},
+			{
+			"featureType": "road.arterial",
+			"elementType": "all",
+			"stylers": [
+			{
+			"lightness": "30"
+			}
+			]
+			},
+			{
+			"featureType": "road.local",
+			"elementType": "all",
+			"stylers": [
+			{
+			"lightness": "40"
+			}
+			]
+			},
+			{
+			"featureType": "transit",
+			"elementType": "all",
+			"stylers": [
+			{
+			"saturation": -100
+			},
+			{
+			"visibility": "simplified"
+			}
+			]
+			},
+			{
+			"featureType": "water",
+			"elementType": "geometry",
+			"stylers": [
+			{
+			"hue": "#ffff00"
+			},
+			{
+			"lightness": -25
+			},
+			{
+			"saturation": -97
+			}
+			]
+			},
+			{
+			"featureType": "water",
+			"elementType": "labels",
+			"stylers": [
+			{
+			"lightness": -25
+			},
+			{
+			"saturation": -100
+			}
+			]
+			}
+			]
+		function initMap() {
+			var uluru = {lat: 55.698639, lng: 37.624270};
+			var map = new google.maps.Map(document.getElementById('map-canvas'), {
+				zoom: 14,
+				center: uluru,
+				scrollwheel: false,
+				styles: style,
+			});
+			var marker = new google.maps.Marker({
+				position: uluru,
+				map: map,
+				icon: 'img/loc.png'
+			});
+		}
+		initMap()

@@ -20,3 +20,5 @@ $(document).ready(function() {
 		$(this).parents('.cat-section').find('.lc-wrapper .large-container').find('.cat__slider').slick('setPosition');
 	});
 });
+
+
